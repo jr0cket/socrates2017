@@ -7,3 +7,10 @@
 
 
 (def recent-songs [])
+
+(defn add-song [song song-list]
+  (cons song-list song))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; REPL Driven Development

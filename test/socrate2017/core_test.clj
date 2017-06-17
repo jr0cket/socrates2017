@@ -17,3 +17,8 @@
     (is
      (empty? recent-songs))))
 
+(deftest adding-songs-test
+  (testing "add song returns a song list with entries"
+    (is
+     (not (empty?
+              (add-song "Barry Manilow - Love on the rocks" recent-songs))))))
