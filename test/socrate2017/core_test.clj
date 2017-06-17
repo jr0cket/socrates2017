@@ -4,4 +4,12 @@
 
 (deftest a-test
   (testing "FIXME, I fail."
-    (is (= 0 1))))
+    (is (= 1 1))))
+
+;; (def song)
+;; (def songs [])
+
+(deftest get-song-list-test
+  (testing "get empty recent song list"
+    (is (= [] recent-songs))))
+
