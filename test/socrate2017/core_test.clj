@@ -11,5 +11,9 @@
 
 (deftest get-song-list-test
   (testing "get empty recent song list"
-    (is (= [] recent-songs))))
+    (is
+     (= [] recent-songs)))
+  (testing "check recent songs is empty"
+    (is
+     (empty? recent-songs))))
 
