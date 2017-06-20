@@ -30,3 +30,11 @@
              (add-song "Barry Manilow - Love on the rocks")
              (add-song "Phil Colins - Sususudio" )))))))
 
+
+(deftest recently-added-song-first-test
+
+  (testing "most recent song should be first in the list when empty list"
+    (is (=
+         (first (add-song "Daft Punk - Get Lucky" recent-songs))
+         "Daft Punk - Get Lucky")))
+
