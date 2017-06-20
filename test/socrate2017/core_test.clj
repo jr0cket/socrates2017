@@ -46,3 +46,27 @@
                (add-song "Pharrell Williams - Happy")))
          "Pharrell Williams - Happy")))
 
+  (testing "most recent song should be first in list when adding a repeated song"
+    (is (=
+         (first
+          (->> recent-songs
+               (add-song "Pharrell Williams - Happy")
+               (add-song "Daft Punk - Get Lucky")
+               (add-song "Pharrell Williams - Happy")))
+         "Pharrell Williams - Happy")))
+
+  (testing "most recent song should be first in list when adding a repeated song"
+    (is (not=
+         (last
+          (->> recent-songs
+               (add-song "Pharrell Williams - Happy")
+               (add-song "Daft Punk - Get Lucky")
+               (add-song "Pharrell Williams - Happy")))
+         "Pharrell Williams - Happy"))))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Song titles
+
+;; "Daft Punk - Get Lucky"
