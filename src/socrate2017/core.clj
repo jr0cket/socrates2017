@@ -64,3 +64,26 @@
 (sorted-set '(1 2 3 4 3 2 1))
 ;; => #{(1 2 3 4 3 2 1)}
 
+
+;; finding an existing element in a collection
+
+;; some
+;; contains
+
+;; or just filter the whole collection of songs, returning those that dont match the latest one
+;; then the latest song can be added to the top of the song list.
+
+(def song-to-add "Love on the rocks")
+(def song-list '("Sususudio" "Love on the rocks"))
+
+;; filter will map a predicate function over a collection of values
+;; so filter returns all the songs not equal to the song to add
+
+(filter #(not= song-to-add %) song-list)
+;; => ("Sususudio")
+
+;; remove works just like filter, except it complements the predicate
+;; so the = function can be used over not= functions - making the logic easier to read
+
+(remove #(= song-to-add %) song-list)
+;; => ("Sususudio")
