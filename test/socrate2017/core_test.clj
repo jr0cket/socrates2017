@@ -38,3 +38,11 @@
          (first (add-song "Daft Punk - Get Lucky" recent-songs))
          "Daft Punk - Get Lucky")))
 
+  (testing "most recent song should be first in list when adding multiple songs"
+    (is (=
+         (first
+          (->> recent-songs
+               (add-song "Daft Punk - Get Lucky")
+               (add-song "Pharrell Williams - Happy")))
+         "Pharrell Williams - Happy")))
+
