@@ -22,3 +22,11 @@
     (is
      (not (empty?
               (add-song "Barry Manilow - Love on the rocks" recent-songs))))))
+
+  (testing "add multiple song returns a song list with entries"
+    (is
+     (not (empty?
+           (->> recent-songs
+             (add-song "Barry Manilow - Love on the rocks")
+             (add-song "Phil Colins - Sususudio" )))))))
+
